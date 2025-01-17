@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets" inherit_id="point_of_sale.assets" name="POS Boleta Button Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pos_boleta_button/static/src/js/BoletaButton.js"></script>
+            <template type="xml" id="BoletaButtonTemplate" src="/pos_boleta_button/static/src/xml/BoletaButton.xml"/>
+        </xpath>
+    </template>
+</odoo>

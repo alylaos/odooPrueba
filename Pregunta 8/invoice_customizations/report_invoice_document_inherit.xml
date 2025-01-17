@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//span[t[contains(., 'Fecha Factura:')]]" position="replace">
+            <t>
+                <span><strong>Fecha de Emisión:</strong></span>
+                <span t-field="o.issue_date" t-options="{'widget': 'datetime'}"/>
+            </t>
+        </xpath>
+
+        <xpath expr="//h2[@t-field='o.name']" position="after">
+            <div>
+                <span><strong>Número de Serie:</strong></span>
+                <span t-field="o.series_number"/>
+            </div>
+            <div>
+                <span><strong>Número Correlativo:</strong></span>
+                <span t-field="o.correlative_number"/>
+            </div>
+        </xpath>
+
+        <!-- Código QR -->
+        <xpath expr="//div[@class='row mt32 mb32']" position="inside">
+            <div class="col-4 text-center">
+                <img t-att-src="'data:image/png;base64,' + o.x_qr_invoice" alt="Código QR" style="max-width: 150px;"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>

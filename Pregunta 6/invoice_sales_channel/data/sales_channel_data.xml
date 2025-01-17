@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="sales_channel_direct" model="sales.channel">
+            <field name="name">Directo</field>
+            <field name="description">Ventas realizadas directamente por el vendedor.</field>
+        </record>
+        <record id="sales_channel_online" model="sales.channel">
+            <field name="name">Online</field>
+            <field name="description">Ventas realizadas a través de la tienda en línea.</field>
+        </record>
+        <record id="sales_channel_distributor" model="sales.channel">
+            <field name="name">Distribuidor</field>
+            <field name="description">Ventas realizadas por distribuidores autorizados.</field>
+        </record>
+    </data>
+</odoo>

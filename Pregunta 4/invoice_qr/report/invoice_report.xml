@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="report_invoice_document_inherit" inherit_id="account.report_invoice_document">
+        <xpath expr="//div[@class='invoice_meta']" position="after">
+            <div class="qr_code_section" style="text-align: center; margin-top: 20px;">
+                <t t-if="o.x_qr_invoice">
+                    <img t-att-src="'data:image/png;base64,' + o.x_qr_invoice" alt="Código QR" style="max-width: 150px;"/>
+                </t>
+            </div>
+        </xpath>
+    </template>
+</odoo>
